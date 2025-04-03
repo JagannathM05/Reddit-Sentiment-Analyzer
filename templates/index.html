@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Sentiment Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🔍 Reddit Sentiment Analyzer</h1>
+    
+    <form id="search-form">
+        <input type="text" id="subreddit" placeholder="Enter subreddit (e.g., IPL, worldnews, news , funny, breakingnews, indianews)">
+        <button type="submit">Search</button>
+    </form>
+    
+    <ul id="results"></ul>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const subreddit = document.getElementById("subreddit").value;
+            fetch(`/fetch_reddit?topic=${subreddit}`)
+                .then(response => response.json())
+                .then(data => {
+                    let resultsHTML = "";
+                    data.forEach(post => {
+                        resultsHTML += `<li>${post.title} → ${post.sentiment}</li>`;
+                    });
+                    document.getElementById("results").innerHTML = resultsHTML;
+                });
+        });
+        
+    </script>
+</body>
+</html>

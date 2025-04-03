@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #2323597d;
+    color: #fff5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Heading */
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Reddit Posts List */
+#results {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Post Container */
+.post {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Sentiment Styling */
+.positive {
+    color: green;
+    font-weight: bold;
+}
+
+.negative {
+    color: red;
+    font-weight: bold;
+}
+
+.neutral {
+    color: gray;
+    font-weight: bold;
+}
+
+/* Individual post styling */
+#results li {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+}

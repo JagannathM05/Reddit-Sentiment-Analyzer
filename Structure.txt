@@ -1,0 +1,8 @@
+reddit-sentiment-analyzer/
+├── app.py              # Main Flask application
+├── templates/
+│   └── index.html      # HTML template
+├── static/
+│   └── style.css       # CSS stylesheet
+├── .env                # Environment variables (not committed)
+└── README.md           # This file
